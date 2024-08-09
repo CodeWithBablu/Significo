@@ -1,6 +1,8 @@
 import { gsap, Power1, Power4 } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
+import LocomotiveScroll from 'locomotive-scroll';
+
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -185,7 +187,7 @@ const footerAnimation = () => {
 
 
 const loco = () => {
-  var scroll = new LocomotiveScroll();
+  const locomotiveScroll = new LocomotiveScroll();
 };
 
 loco();
