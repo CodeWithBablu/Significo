@@ -11,21 +11,23 @@ const screen = {
   'xl': 1280,
 }
 
-document.querySelectorAll(".section")
-  .forEach((section) => {
-    ScrollTrigger.create({
-      trigger: section,
-      start: "top 50%",
-      end: "bottom 50%",
-      // markers: true,
-      onEnter: function () {
-        document.body.setAttribute("theme", section.dataset.color);
-      },
-      onEnterBack: function () {
-        document.body.setAttribute("theme", section.dataset.color);
-      }
-    })
-  })
+const sectionColorChangeAnimation = () => {
+  document.querySelectorAll(".section")
+    .forEach((section) => {
+      ScrollTrigger.create({
+        trigger: section,
+        start: "top 50%",
+        end: "bottom 50%",
+        // markers: true,
+        onEnter: function () {
+          document.body.setAttribute("theme", section.dataset.color);
+        },
+        onEnterBack: function () {
+          document.body.setAttribute("theme", section.dataset.color);
+        }
+      })
+    });
+}
 
 const homePageAnimation = () => {
   gsap.set(".hero_rows-parent", { scale: 5 });
@@ -86,7 +88,7 @@ const homePageAnimation = () => {
           scrub: 0.3,
         },
         backgroundColor: "#09090b",
-        color: "#f3f4f6",
+        color: "#a5f3fc",
         width: "+=50",
         ease: Power1.easeInOut
       });
@@ -192,3 +194,4 @@ slidePageAnimation();
 teamAnimation();
 footerAnimation();
 capsuleAnimation();
+sectionColorChangeAnimation();

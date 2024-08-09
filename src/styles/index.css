@@ -20,8 +20,7 @@ body {
     --cyan: #a5f3fc;
     --white: #f1f5f9;
     --dsalmon: #532521;
-    --dcyan: #1f2f32;
-    --scrollPrimary: #dc2626;
+    --scrollPrimary: #ea580c;
     --scrollSecondary: #18181b;
   }
 
@@ -47,6 +46,16 @@ body {
     color: var(--white);
     -webkit-text-fill-color: var(--white);
     -webkit-text-stroke-color: transparent;
+  }
+
+  body[theme="black"] nav {
+    color: #f3f4f6;
+  }
+
+  body[theme="white"] .nav-text,
+  body[theme="salmon"] .nav-text,
+  body[theme="cyan"] .nav-text {
+    color: #09090b;
   }
 
   body[theme="black"] {
