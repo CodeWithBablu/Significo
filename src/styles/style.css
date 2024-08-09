@@ -1,0 +1,11 @@
+:root {
+  --mainPx: 20px;
+}
+
+.vdiv {
+  clip-path: circle(var(--clip) at 50% 50%);
+}
+
+.card {
+  transition: width 0.2s ease-in;
+}
